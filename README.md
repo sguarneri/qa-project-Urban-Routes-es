@@ -1,13 +1,14 @@
 # Suite de pruebas automatizadas para la plataforma Urban Routes.
 
-Descripición: Este proyecto se desarrolló para acreditar el Sprint 8 **"Automatización de pruebas de la aplicación web"** del Bootcamp **QA Engineer** de TripleTen.
+Descripción: Este proyecto se desarrolló para acreditar el Sprint 8 **"Automatización de pruebas de la aplicación web"** del Bootcamp **QA Engineer** de TripleTen.
 
 ## Tabla de contenidos.
 - Introducción.
-- Instalación.
+- Requisitos previos.
 - Uso.
 - Estructura del proyecto.
-- Lista de comprobación de pruebas.
+- Lista de pruebas.
+- Técnicas utilizadas
 
 ## Introducción.
 
@@ -23,7 +24,7 @@ Se requiere la instalación de las librerías:
 
 ## Uso.
 
-Para correr las pruebas basta con escribir el comando 'pytest main.py' en la terminal.
+Para correr las pruebas basta con escribir el comando 'pytest tests/' en la terminal.
 
 ## Estructura del proyecto.
 
