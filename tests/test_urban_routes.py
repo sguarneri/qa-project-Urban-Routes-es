@@ -19,6 +19,7 @@ class TestUrbanRoutes:
 
         cls.driver = webdriver.Chrome(service=Service(), options=options)
 
+
     def test_set_route(self):
         self.driver.get(data.urban_routes_url)
         routes_page = UrbanRoutesPage(self.driver)
@@ -62,17 +63,17 @@ class TestUrbanRoutes:
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.set_blanket_and_tissues_slider()
         switch = self.driver.find_element(By.CSS_SELECTOR, '.switch-input')
-        assert switch.is_selected() == True
+        assert switch.is_enabled() == True
 
-    def test_oder_two_ice_creams(self):
+    def test_order_two_ice_creams(self):
         self.test_ask_for_a_blanket_and_tissues()
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.request_two_ice_creams()
-        counter_value = self.driver.find_element(By.CSS_SELECTOR, '.counter-value').text
+        counter_value = self.driver.find_element(By.CLASS_NAME, 'counter-value').text
         assert counter_value == "2"
 
     def test_ordering_a_taxi(self):
-        self.test_oder_two_ice_creams()
+        self.test_order_two_ice_creams()
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.request_a_taxi()
         ordering_a_taxi_modal_appears = routes_page.wait_for_element(routes_page.ordering_a_taxi_modal)
